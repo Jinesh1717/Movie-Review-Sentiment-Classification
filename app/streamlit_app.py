@@ -8,17 +8,23 @@ Includes:
 - Tab 4: About dataset, methodology, domain rules, and limitations
 """
 
+import os
 import sys
 from pathlib import Path
+
+# Add project root to sys.path at index 0
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+# Ensure all caching and huggingface downloads stay strictly on D: drive
+os.environ["HF_HOME"] = "D:\\cache\\huggingface"
+os.environ["TORCH_HOME"] = "D:\\cache\\torch"
+
 import io
 import pandas as pd
 import numpy as np
 import streamlit as st
-
-# Add project root to sys.path
-ROOT_DIR = Path(__file__).resolve().parent.parent
-if str(ROOT_DIR) not in sys.path:
-    sys.path.append(str(ROOT_DIR))
 
 from src.config import REPORTS_DIR, FIGURES_DIR, MODELS_DIR
 from src.predict import predict, load_inference_model

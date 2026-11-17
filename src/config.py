@@ -1,7 +1,12 @@
 """Configuration settings, paths, seeds, and hyperparameters for DL-06 Movie Review Sentiment Classification."""
 
+import os
 from pathlib import Path
 import torch
+
+# Ensure Hugging Face and PyTorch never write cache to C: drive
+os.environ["HF_HOME"] = "D:\\cache\\huggingface"
+os.environ["TORCH_HOME"] = "D:\\cache\\torch"
 
 # Base directories
 BASE_DIR = Path(__file__).resolve().parent.parent
