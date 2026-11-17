@@ -1,0 +1,42 @@
+[
+  {
+    "model_name": "TF-IDF + Logistic Regression",
+    "train_time_sec": 17.74,
+    "val_accuracy": 0.9043,
+    "parameters": 25001,
+    "checkpoint_path": "models/tfidf_logreg.joblib"
+  },
+  {
+    "model_name": "TF-IDF + Linear SVM",
+    "train_time_sec": 17.55,
+    "val_accuracy": 0.9080,
+    "parameters": 25001,
+    "checkpoint_path": "models/tfidf_svm.joblib"
+  },
+  {
+    "model_name": "BiLSTM",
+    "train_time_sec": 482.35,
+    "val_accuracy": 0.6765,
+    "val_loss": 0.6246,
+    "parameters": 3877697,
+    "checkpoint_path": "models/bilstm_best.pt"
+  },
+  {
+    "model_name": "1D Text CNN",
+    "train_time_sec": 167.12,
+    "val_accuracy": 0.8275,
+    "val_loss": 0.3861,
+    "parameters": 3421697,
+    "checkpoint_path": "models/cnn_best.pt"
+  },
+  {
+    "model_name": "DistilBERT",
+    "train_time_sec": 1462.40,
+    "val_accuracy": 0.8780,
+    "val_loss": 0.3032,
+    "parameters": 66955010,
+    "checkpoint_path": "models/distilbert",
+    "cpu_subsampled": true,
+    "train_samples_used": 3000
+  }
+]

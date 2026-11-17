@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data directories (raw IMDB dataset is ~84MB compressed, ~250MB uncompressed)
+data/raw/
+data/*.tar.gz
+data/*.zip
+
+# Model checkpoints exceeding GitHub file size limits (>100MB)
+models/distilbert/model.safetensors
+models/distilbert/pytorch_model.bin
+models/*.pt
+models/*.bin
+models/*.safetensors
+*.pth
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Streamlit runtime
+.streamlit/secrets.toml
+
+# OS generated files
+.DS_Store
+Thumbs.db
